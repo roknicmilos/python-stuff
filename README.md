@@ -24,3 +24,8 @@ Setup environment for all projects in this repository:
     ```bash
     pip install -r requirements.txt
     ```
+5. Run the program:
+    ```bash
+    python main.py
+    ```
+   

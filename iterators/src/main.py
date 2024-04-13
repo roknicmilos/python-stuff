@@ -1,3 +1,4 @@
+from iterators.src.sequence_iter import SequenceIterator
 from utils import wrap_output
 
 
@@ -17,20 +18,30 @@ def run_definite_iteration():
         print(f"{iteration}. iteration")
 
 
+@wrap_output
+def run_sequence_iterator():
+    sequence = [1, 2, 3]
+    print("Running SequenceIterator with a `for` loop:")
+    for item in SequenceIterator(sequence):
+        print(f"Item: {item}")
+
+
 def print_options():
-    print("1. Run indefinite iteration with a `while` loop")
-    print("2. Run definite iteration with a `for` loop")
-    print("3. Exit")
+    print("[1] Run indefinite iteration with a `while` loop")
+    print("[2] Run definite iteration with a `for` loop")
+    print("[3] Run SequenceIterator with a `for` loop")
+    print("[X] Exit")
 
 
-if __name__ == "__main__":
+def start_program():
     while True:
         print_options()
-        value = input("Enter the number of an option you want to run: ")
+        value = input("Choose iterator option: ")
         if value == "1":
             run_indefinite_iteration()
         elif value == "2":
             run_definite_iteration()
         elif value == "3":
-            print("Bye! Come back soon!")
+            run_sequence_iterator()
+        elif value.lower() == "x":
             break
