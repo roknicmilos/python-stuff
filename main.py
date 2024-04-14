@@ -1,10 +1,6 @@
 from iterators.main import start_program as start_iterators_program
-
-
-def print_options():
-    print("[1] Iterators")
-    print("[X] Exit")
-
+from concurrency.main import start_program as start_concurrency_program
+from utils import Options
 
 if __name__ == '__main__':
     import sys
@@ -14,12 +10,17 @@ if __name__ == '__main__':
     # modules can import the parent modules:
     sys.path.append(str(Path(__file__).parent))
 
+    options = Options("Main Menu")
+    options.add_option("Iterators")
+    options.add_option("Concurrency")
+
     while True:
-        print_options()
-        value = input("Choose a program: ")
-        if value == "1":
+        option = options.get_option()
+        if option == "1":
             start_iterators_program()
-        elif value.lower() == "x":
+        elif option == "2":
+            start_concurrency_program()
+        elif option.lower() == "x":
             print("Bye! Come back soon!")
             break
         else:

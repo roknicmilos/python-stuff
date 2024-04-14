@@ -1,6 +1,7 @@
+import concurrent.futures
 import time
 
-from data import numbers
+from concurrency.data import numbers
 
 
 def cpu_bound(number):
@@ -8,13 +9,13 @@ def cpu_bound(number):
 
 
 def calculate_sums():
-    for number in numbers:
-        cpu_bound(number)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
+        executor.map(cpu_bound, numbers)
 
 
-if __name__ == "__main__":
+def run():
     start_time = time.time()
-    print("Calculating...")
+    print("Calculating with `threading`...")
     calculate_sums()
     duration = time.time() - start_time
     print(f"Duration {duration} seconds")

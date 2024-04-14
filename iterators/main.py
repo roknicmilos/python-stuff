@@ -1,5 +1,5 @@
 from iterators.sequence_iter import SequenceIterator
-from utils import wrap_output
+from utils import wrap_output, Options
 
 
 @wrap_output
@@ -26,22 +26,22 @@ def run_sequence_iterator():
         print(f"Item: {item}")
 
 
-def print_options():
-    print("[1] Run indefinite iteration with a `while` loop")
-    print("[2] Run definite iteration with a `for` loop")
-    print("[3] Run SequenceIterator with a `for` loop")
-    print("[X] Exit")
-
-
 def start_program():
+    options = Options("Iterators")
+    options.add_option("Run indefinite iteration with a `while` loop")
+    options.add_option("Run definite iteration with a `for` loop")
+    options.add_option("Run SequenceIterator with a `for` loop")
+
     while True:
-        print_options()
-        value = input("Choose iterator option: ")
-        if value == "1":
+        option = options.get_option()
+
+        # raise ValueError(option)
+
+        if option == "1":
             run_indefinite_iteration()
-        elif value == "2":
+        elif option == "2":
             run_definite_iteration()
-        elif value == "3":
+        elif option == "3":
             run_sequence_iterator()
-        elif value.lower() == "x":
+        elif option.lower() == "x":
             break

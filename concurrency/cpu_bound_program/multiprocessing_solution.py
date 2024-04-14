@@ -1,7 +1,7 @@
 import multiprocessing
 import time
 
-from data import numbers
+from concurrency.data import numbers
 
 
 def cpu_bound(number):
@@ -13,9 +13,9 @@ def find_sums():
         pool.map(cpu_bound, numbers)
 
 
-if __name__ == "__main__":
+def run():
     start_time = time.time()
-    print("Calculating...")
+    print("Calculating with `multiprocessing`...")
     find_sums()
     duration = time.time() - start_time
     print(f"Duration {duration} seconds")

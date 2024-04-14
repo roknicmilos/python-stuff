@@ -1,15 +1,65 @@
-class Args:
+from datetime import datetime
+from typing import Callable
 
-    def __init__(self, *args):
-        self.args = args
-        self.verbose = self._parse_first_arg()
 
-    def _parse_first_arg(self) -> bool:
-        if len(self.args) < 2:
-            return False
+def wrap_site_downloads(url_count: int, optimization: str = None) -> Callable:
+    def decorator(func: Callable) -> Callable:
+        def wrapper(*args, **kwargs):
+            start_time = datetime.now()
+            _print_start_message(url_count=url_count, optimization=optimization)
+            func(*args, **kwargs)
+            duration = datetime.now() - start_time
+            _print_end_message(
+                url_count=url_count,
+                duration=duration.total_seconds(),
+                optimization=optimization
+            )
 
-        first_arg = self.args[1]
-        if first_arg == "-v":
-            return True
+        return wrapper
 
-        raise ValueError(f"Invalid argument {first_arg}")
+    return decorator
+
+
+def async_wrap_site_downloads(
+        url_count: int,
+        optimization: str = None
+) -> Callable:
+    def decorator(func: Callable) -> Callable:
+        async def wrapper(*args, **kwargs):
+            start_time = datetime.now()
+            _print_start_message(url_count=url_count, optimization=optimization)
+            await func(*args, **kwargs)
+            duration = datetime.now() - start_time
+            _print_end_message(
+                url_count=url_count,
+                duration=duration.total_seconds(),
+                optimization=optimization
+            )
+
+        return wrapper
+
+    return decorator
+
+
+def _print_start_message(url_count: int, optimization: str = None) -> None:
+    start_message = f"Downloading {url_count} sites"
+    if optimization:
+        start_message += f" using `{optimization}`..."
+    else:
+        start_message += " without any optimization..."
+
+    print(start_message)
+
+
+def _print_end_message(
+        url_count: int,
+        duration: float,
+        optimization: str = None
+) -> None:
+    end_message = f"Downloaded {url_count} sites in {duration} seconds"
+    if optimization:
+        end_message += f" using `{optimization}`"
+    else:
+        end_message += " without any optimization"
+
+    print(end_message)
