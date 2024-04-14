@@ -1,4 +1,4 @@
-from iterators.src.main import start_program as start_iterators_program
+from iterators.main import start_program as start_iterators_program
 
 
 def print_options():

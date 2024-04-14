@@ -1,4 +1,4 @@
-from iterators.src.sequence_iter import SequenceIterator
+from iterators.sequence_iter import SequenceIterator
 from utils import wrap_output
 
 
