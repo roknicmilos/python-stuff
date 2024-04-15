@@ -1,4 +1,5 @@
 from iterators.fibonacci_iterator import FibonacciIterator
+from iterators.generators import sequence_generator
 from iterators.infinite_fibonacci_iterator import InfiniteFibonacciIterator
 from iterators.sequence_iter import SequenceIterator
 from iterators.square_iterator import SquareIterator
@@ -54,6 +55,14 @@ def run_infinite_fibonacci_iterator():
         print(f"Item: {number}")
 
 
+@wrap_output
+def run_sequence_generator_iterator():
+    print("Running sequence_generator with a `for` loop:")
+    for number in sequence_generator([2, 4, 6]):
+        print(f"Item: {number}")
+    print(f"\nExplanation:{sequence_generator.__doc__}")
+
+
 def start_program():
     options = Options("Iterators")
     options.add_option("Run indefinite iteration with a `while` loop")
@@ -62,6 +71,7 @@ def start_program():
     options.add_option("Run SquareIterator with a `for` loop")
     options.add_option("Run FibonacciIterator with a `for` loop")
     options.add_option("Run InfiniteFibonacciIterator with a `for` loop")
+    options.add_option("Run sequence_generator with a `for` loop")
 
     while True:
         option = options.get_option()
@@ -77,5 +87,7 @@ def start_program():
             run_fibonacci_iterator()
         elif option == "6":
             run_infinite_fibonacci_iterator()
+        elif option == "7":
+            run_sequence_generator_iterator()
         elif option.lower() == "x":
             break
