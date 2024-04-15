@@ -1,10 +1,8 @@
 class FibonacciIterator:
     """
-    Iterator that is GENERATING new data, Fibonacci
-    numbers in this case.
-    Takes no input data, generating new data as a
-    result of some computation to finally yield the
-    generated items.
+    Iterator that is GENERATING new data, Fibonacci numbers in this case.
+    Takes no input data, generating new data as a result of some computation
+    to finally yield the generated items.
     """
 
     def __init__(self, stop=10):
