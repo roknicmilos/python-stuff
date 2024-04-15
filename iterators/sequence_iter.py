@@ -1,6 +1,6 @@
 class SequenceIterator:
     """
-    Iterator that is yielding the original data.
+    Iterator that is YIELDING the ORIGINAL data.
     Takes a stream of data and yields data items
     as they appear in the original data.
     """
