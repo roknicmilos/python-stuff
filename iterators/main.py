@@ -63,6 +63,25 @@ def run_sequence_generator_iterator():
     print(f"\nExplanation:{sequence_generator.__doc__}")
 
 
+@wrap_output
+def run_generator_expression_iterator():
+    print("Running generator iterator created with generator expression:")
+    generator_expression = (number for number in [2, 4, 6])
+    for number in generator_expression:
+        print(f"Item: {number}")
+
+
+@wrap_output
+def run_exhausted_generator_iterator():
+    print("Running exhausted generator iterator with a `for` loop:")
+    generator_expression = (number for number in [2, 4, 6])
+    list(generator_expression)
+    for number in generator_expression:
+        print(f"Item: {number}")
+    else:
+        print("Generator is exhausted. There are no more items to yield.")
+
+
 def start_program():
     options = Options("Iterators")
     options.add_option("Run indefinite iteration with a `while` loop")
@@ -72,6 +91,10 @@ def start_program():
     options.add_option("Run FibonacciIterator with a `for` loop")
     options.add_option("Run InfiniteFibonacciIterator with a `for` loop")
     options.add_option("Run sequence_generator with a `for` loop")
+    options.add_option(
+        "Run generator created with expression with a `for` loop"
+    )
+    options.add_option("Run exhausted generator iterator with a `for` loop")
 
     while True:
         option = options.get_option()
@@ -89,5 +112,9 @@ def start_program():
             run_infinite_fibonacci_iterator()
         elif option == "7":
             run_sequence_generator_iterator()
+        elif option == "8":
+            run_generator_expression_iterator()
+        elif option == "9":
+            run_exhausted_generator_iterator()
         elif option.lower() == "x":
             break
