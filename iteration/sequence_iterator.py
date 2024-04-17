@@ -3,9 +3,8 @@ from collections.abc import Iterator
 
 class SequenceIterator(Iterator):
     """
-    Iterator that is YIELDING the ORIGINAL data.
-    Takes a stream of data and yields data items as they appear in the
-    original data.
+    Iterator that is YIELDING the ORIGINAL data. Takes a stream of data and
+    yields data items as they appear in the original data.
     """
 
     def __init__(self, sequence):

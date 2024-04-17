@@ -1,9 +1,9 @@
 class SquareIterator:
     """
-    Iterator that is TRANSFORMING the input data.
-    Takes a data stream, transform each item, and yield transformed items.
-    Computes items on demand (one at a time) without storing them in memory.
-    In this regard, iterators are lazy objects.
+    Iterator that is TRANSFORMING the input data. Takes a data stream,
+    transform each item, and yield transformed items. Computes items on
+    demand (one at a time) without storing them in memory. In this regard,
+    iterators are lazy objects.
     """
 
     def __init__(self, sequence):
