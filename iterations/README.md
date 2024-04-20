@@ -77,3 +77,6 @@ iterator protocol**. This protocol is based on two methods:
 - `__anext__`: It must return an awaitable object from a stream.
   It must raise a `StopAsyncIteration` exception when the iterator
   is exhausted.
+
+## References
+- [Iterators and Iterables in Python: Run Efficient Iterations](https://realpython.com/python-iterators-iterables/)

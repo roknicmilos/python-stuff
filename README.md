@@ -5,7 +5,7 @@ features and libraries.
 
 ## Table of Contents
 
-- [Iterators and Iterables](./iteration/README.md)
+- [Iterators and Iterables](./iterations/README.md)
 
 ## Setup
 
