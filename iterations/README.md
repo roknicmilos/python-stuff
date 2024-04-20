@@ -92,6 +92,43 @@ iterator protocol**. This protocol is based on two methods:
 - Iterators don’t allow indexing and slicing operations with the
   [] operator
 
+## Iterables
+
+When it comes to iteration in Python, you’ll often hear people
+talking about iterable objects or just iterables.
+As the name suggests, an iterable is an **object that you can
+iterate over**.
+To perform this iteration, you’ll typically use a `for` loop.
+
+Simple way of checking if object is iterable: pass it to `iter()`
+function, and if it doesn't raise `TypeError`the object is
+iterable.
+
+A Python object is considered an iterable when it implements one
+special method known as the **iterable protocol**. This method
+is `__iter__`.
+
+Pure iterable objects typically hold the data themselves.
+Common iterable objects in Python are `lists`, `tuples`,
+`dictionaries`, `sets`, `string`, `ranges`, `files`, etc.
+
+Iterables don't have to implement **iterable protocol**. Instead,
+they can implement **sequence protocol** using these two methods:
+
+- `__len__`
+- `__getitem__`
+
+When passing an object that implements those two magic methods to
+`iter()` function, Python will build an iterator using those two
+methods even without implementation of `__iter__` method.
+
+`reversed()` function calls `__reverse__` method of iterable
+object (e.g. with list, tuples and dictionaries), but if it is
+not implemented, it uses `__len__` and `__getitem___` methods
+(e.g. with strings).
+
+Check out this simple [Iterable](./iterables/iterable.py) example.
+
 ## References
 
 - [Iterators and Iterables in Python: Run Efficient Iterations](https://realpython.com/python-iterators-iterables/)
