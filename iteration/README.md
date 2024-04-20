@@ -37,6 +37,36 @@ iterable unpacking, and more.
 
 ### Iterator Types
 
-- Iterators that **yield original data** (example: [SequenceIterator](./sequence_iterator.py))
-- Iterators that **yield transform data** (example: [SquareIterator](./square_iterator.py))
-- Iterators that **yield generate data** (example: [FibonacciIterator](./fibonacci_iterator.py))
+- Iterators that **yield original data** (example:
+  [SequenceIterator](./iterators/sequence_iterator.py))
+- Iterators that **yield transform data** (example:
+  [SquareIterator](./iterators/square_iterator.py))
+- Iterators that **yield generate data** (example:
+  [FibonacciIterator](./iterators/fibonacci_iterator.py))
+
+### Generators
+
+Generator functions are special types of functions that allow you
+to create iterators using a **functional style**.
+The function-based iterator is way simpler and more straightforward
+to write and understand compared to its class-based equivalent.
+
+Check out [these generator examples](./iterators/generators.py).
+
+### Memory Efficiency
+
+Iterators and generators are **pretty memory-efficient** when you
+compare them with regular functions, container data types, and
+comprehensions.
+With iterators and generators, you don’t need to store all the data
+in memory (RAM) at the same time. Iterators **keep only one data
+item in memory at a time**, generating the next items on demand or
+**lazily**.
+
+Another important memory-related difference between iterators,
+functions, data structures, and comprehensions is that iterators
+are the **only way to process infinite data streams**.
+
+### Async Iterators
+
+TODO
