@@ -69,4 +69,11 @@ are the **only way to process infinite data streams**.
 
 ### Async Iterators
 
-TODO
+They are the same as regular iterators, except instead of using
+iterator protocol methods, they use something we can call **async
+iterator protocol**. This protocol is based on two methods:
+
+- `__aiter__`: It must return an async iterator object.
+- `__anext__`: It must return an awaitable object from a stream.
+  It must raise a `StopAsyncIteration` exception when the iterator
+  is exhausted.
