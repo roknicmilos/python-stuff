@@ -129,6 +129,28 @@ not implemented, it uses `__len__` and `__getitem___` methods
 
 Check out this simple [Iterable](./iterables/iterable.py) example.
 
+## Iterators vs Iterables
+
+According to this internal structure, you can conclude that all
+iterators are iterables because they meet the iterable protocol.
+However, not all iterables are iterators — only those implementing
+the `__next__` method.
+
+| Feature                                       | Iterators                                             | Iterables                                             |
+|-----------------------------------------------|-------------------------------------------------------|-------------------------------------------------------|
+| Can be used in for loops directly             | <div style="text-align: center;"><span>✅</span></div> | <div style="text-align: center;"><span>✅</span></div> |
+| Can be iterated over many times               | <div style="text-align: center;"><span>❌</span></div> | <div style="text-align: center;"><span>✅</span></div> | 
+| Support the `iter()` function                 | <div style="text-align: center;"><span>✅</span></div> | <div style="text-align: center;"><span>✅</span></div> | 
+| Support the `next()` function                 | <div style="text-align: center;"><span>✅</span></div> | <div style="text-align: center;"><span>❌</span></div> | 
+| Keep information about the state of iteration | <div style="text-align: center;"><span>✅</span></div> | <div style="text-align: center;"><span>❌</span></div> | 
+| Optimize memory use                           | <div style="text-align: center;"><span>✅</span></div> | <div style="text-align: center;"><span>❌</span></div> |
+
+In general, when dealing with huge datasets, you should take 
+advantage of iterators and write memory-efficient code. 
+In contrast, if you’re coding custom container or collection 
+classes, then provide them with the iterable protocol so that
+you can use them later in for loops.
+
 ## References
 
 - [Iterators and Iterables in Python: Run Efficient Iterations](https://realpython.com/python-iterators-iterables/)
