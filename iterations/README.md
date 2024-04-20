@@ -78,5 +78,20 @@ iterator protocol**. This protocol is based on two methods:
   It must raise a `StopAsyncIteration` exception when the iterator
   is exhausted.
 
+### Constraints of Iterators
+
+- You can’t iterate over an iterator more than once
+    - but you could implement workarounds
+- Tightly connected to the previous one, you can’t reset an
+  exhausted iterator to start iteration again
+- You can only move forward through an iterator, you can’t move
+  backward
+    - there is no `__previous__` method, only `__next__`
+- You can’t know their length or number of items
+    - you can only know it only after you consume iterator data
+- Iterators don’t allow indexing and slicing operations with the
+  [] operator
+
 ## References
+
 - [Iterators and Iterables in Python: Run Efficient Iterations](https://realpython.com/python-iterators-iterables/)
