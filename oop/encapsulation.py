@@ -1,3 +1,17 @@
+"""
+Encapsulation is a concept that restricts access to certain
+details of an object and only exposes what is necessary,
+like a protective shield.
+
+The main goal of encapsulation is to protect the internal
+state of an object and ensure that the object’s methods are
+used to manipulate that state in a controlled manner.
+
+Encapsulation is achieved with access modifiers (private,
+protected, public), getter and setter.
+"""
+
+
 class Person:
     def __init__(self, name, age):
         self.name = name  # Public attribute
