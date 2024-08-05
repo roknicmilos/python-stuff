@@ -145,9 +145,9 @@ the `__next__` method.
 | Keep information about the state of iteration | <div style="text-align: center;"><span>✅</span></div> | <div style="text-align: center;"><span>❌</span></div> | 
 | Optimize memory use                           | <div style="text-align: center;"><span>✅</span></div> | <div style="text-align: center;"><span>❌</span></div> |
 
-In general, when dealing with huge datasets, you should take 
-advantage of iterators and write memory-efficient code. 
-In contrast, if you’re coding custom container or collection 
+In general, when dealing with huge datasets, you should take
+advantage of iterators and write memory-efficient code.
+In contrast, if you’re coding custom container or collection
 classes, then provide them with the iterable protocol so that
 you can use them later in for loops.
 
