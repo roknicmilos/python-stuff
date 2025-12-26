@@ -65,12 +65,10 @@ Object-Oriented Software" by "Gang of Four" (GoF)](https://www.digitalocean.com/
 
 ## Dependency Injection (DI) Pattern
 
-DI is a design pattern where a class/function doesn’t create its own
-dependencies, but instead receives them from the outside (injected). The GoF
-book was written in 1994, and DI as a formalized pattern became popular later (
-especially with frameworks like Spring in the early 2000s). So it wasn't really
-part of the original GoF classification, but if we had to classify it, DI is a
-design pattern that falls primarily under behavioral patterns (with creational
-aspects).
+The GoF book was written in 1994, and DI as a formalized pattern became popular
+later (especially with frameworks like Spring in the early 2000s). So it wasn't
+really part of the original GoF classification, but if we had to classify it, DI
+is a design pattern that falls primarily under behavioral patterns (with
+creational aspects).
 
-[More about Dependency Injection...](dependency_injection/README.md)
+[More about Dependency Injection (and Dependency Inversion Principle)](dependency_injection/README.md)
