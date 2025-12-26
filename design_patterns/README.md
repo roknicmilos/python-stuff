@@ -47,17 +47,30 @@ The main design pattern groups are traditionally organized into three
 categories, based on the classic book ["Design Patterns: Elements of Reusable
 Object-Oriented Software" by "Gang of Four" (GoF)](https://www.digitalocean.com/community/tutorials/gangs-of-four-gof-design-patterns):
 
-* **Creational Patterns** - These deal with object creation mechanisms, helping
-  create objects in a manner suitable to the situation. They include patterns
-  like Singleton, Factory Method, Abstract Factory, Builder, and Prototype. The
-  goal is to make the system independent of how its objects are created and
-  represented.
-* **Structural Patterns** - These focus on how classes and objects are composed
-  to form larger structures. Examples include Adapter, Bridge, Composite,
-  Decorator, Facade, Flyweight, and Proxy. They help ensure that if one part of
-  a system changes, the entire structure doesn't need to change.
-* **Behavioral Patterns** - These are concerned with algorithms and the
-  assignment of responsibilities between objects. They describe patterns of
-  communication between objects. Examples include Observer, Strategy, Command,
-  Iterator, State, Template Method, Chain of Responsibility, Mediator, Memento,
-  Visitor, and Interpreter.
+* [**Creational Patterns**](gang_of_4/creational_patterns/README.md) - These
+  deal with object creation mechanisms, helping create objects in a manner
+  suitable to the situation. They include patterns like Singleton, Factory
+  Method, Abstract Factory, Builder, and Prototype. The goal is to make the
+  system independent of how its objects are created and represented.
+* [**Structural Patterns**](gang_of_4/structural_patterns/README.md) - These
+  focus on how classes and objects are composed to form larger structures.
+  Examples include Adapter, Bridge, Composite, Decorator, Facade, Flyweight, and
+  Proxy. They help ensure that if one part of a system changes, the entire
+  structure doesn't need to change.
+* [**Behavioral Patterns**](gang_of_4/behavioral_patterns/README.md) - These are
+  concerned with algorithms and the assignment of responsibilities between
+  objects. They describe patterns of communication between objects. Examples
+  include Observer, Strategy, Command, Iterator, State, Template Method, Chain
+  of Responsibility, Mediator, Memento, Visitor, and Interpreter.
+
+## Dependency Injection (DI) Pattern
+
+DI is a design pattern where a class/function doesn’t create its own
+dependencies, but instead receives them from the outside (injected). The GoF
+book was written in 1994, and DI as a formalized pattern became popular later (
+especially with frameworks like Spring in the early 2000s). So it wasn't really
+part of the original GoF classification, but if we had to classify it, DI is a
+design pattern that falls primarily under behavioral patterns (with creational
+aspects).
+
+[More about Dependency Injection...](dependency_injection/README.md)
