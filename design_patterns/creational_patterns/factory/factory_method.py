@@ -1,5 +1,5 @@
 """
-Factory Method Design Pattern
+Factory Method Pattern
 
 What it does:
     Base class defines a method, subclasses decide
