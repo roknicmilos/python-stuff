@@ -21,7 +21,7 @@ class UserService:
 
 
 if __name__ == "__main__":
-    from dependency_injection.helpers.email_service import EmailService
+    from helpers.email_service import EmailService
 
     _email_service = EmailService(from_address="sender@example.com")
     user_service = UserService(email_service=_email_service)
