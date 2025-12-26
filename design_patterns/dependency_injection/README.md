@@ -29,14 +29,14 @@ implement DIP in practice.
 
 * **DI without types**: Dependencies are injected from outside, but
   no type annotations are used (common in dynamic languages like Python,
-  JavaScript).
+  JavaScript). [Example in Python](./examples/di_w_no_types.py)
 * **DI with interfaces**: Dependencies are injected and typed with
   abstract interfaces/protocols (e.g., `Protocol` in Python, interfaces in
   Java/C#). High-level modules depend on abstractions, not concrete
-  implementations.
+  implementations. [Example in Python](./examples/di_w_interfaces.py)
 * **DI with concrete implementations**: Dependencies are injected but typed
-  with
-  concrete classes rather than abstractions, creating tight coupling.
+  with concrete classes rather than abstractions, creating tight coupling.
+  [Example in Python](./examples/di_w_concrete_impl.py)
 
 ## Benefits of DI
 

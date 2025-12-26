@@ -1,4 +1,7 @@
-class EmailService:
+from helpers.email_service_interface import EmailServiceInterface
+
+
+class EmailService(EmailServiceInterface):
     def __init__(self, from_address: str):
         self._from_address = from_address
 
