@@ -40,3 +40,24 @@ structure)
 * Examples: MVC, MVVM, MVP, Clean Architecture, Hexagonal Architecture,
   Monolith, Microservices, Event-driven architecture, etc.
 * These patterns shape how your whole application is organized.
+
+## Gang of Four (GoF) Design Patterns
+
+The main design pattern groups are traditionally organized into three
+categories, based on the classic book ["Design Patterns: Elements of Reusable
+Object-Oriented Software" by "Gang of Four" (GoF)](https://www.digitalocean.com/community/tutorials/gangs-of-four-gof-design-patterns):
+
+* **Creational Patterns** - These deal with object creation mechanisms, helping
+  create objects in a manner suitable to the situation. They include patterns
+  like Singleton, Factory Method, Abstract Factory, Builder, and Prototype. The
+  goal is to make the system independent of how its objects are created and
+  represented.
+* **Structural Patterns** - These focus on how classes and objects are composed
+  to form larger structures. Examples include Adapter, Bridge, Composite,
+  Decorator, Facade, Flyweight, and Proxy. They help ensure that if one part of
+  a system changes, the entire structure doesn't need to change.
+* **Behavioral Patterns** - These are concerned with algorithms and the
+  assignment of responsibilities between objects. They describe patterns of
+  communication between objects. Examples include Observer, Strategy, Command,
+  Iterator, State, Template Method, Chain of Responsibility, Mediator, Memento,
+  Visitor, and Interpreter.
