@@ -19,7 +19,7 @@ space requirements grow with the input size `n`.
 
 ## Common Big O Classes
 
-![img.png](img.png)
+![img.png](docs/bigO-graph.png)
 
 ### `O(1)`
 
