@@ -66,3 +66,34 @@ queries until needed), image lazy loading, authentication/authorization
 middleware, ORM lazy relationships, remote stubs/proxies for web services.
 
 [Example in Python](examples/proxy.py)
+
+---
+
+## Decorator Design Pattern
+
+**What It Is**: A structural pattern that lets you add responsibilities to
+individual objects dynamically by wrapping them with decorator objects. Each
+decorator implements the same interface as the object it wraps and delegates
+calls while adding behavior before or after delegation.
+
+**Purpose**: Solves the problem of extending object behavior without creating a
+large hierarchy of subclasses. Instead of modifying existing classes, you
+compose behavior at runtime by stacking decorators.
+
+**Benefits**:
+
+* Adheres to the Open/Closed Principle — extend behavior without modifying
+  existing code.
+* Encourages Single Responsibility — each decorator focuses on one concern.
+* Supports flexible composition — combine multiple decorators in different
+  orders to vary behavior.
+* Avoids subclass explosion — no need for many subclasses for every feature
+  combination.
+* Enables dynamic behavior changes at runtime.
+
+**Common Use Cases You've Seen**: I/O stream wrappers, logging and
+authentication middleware, caching wrappers, and function decorators in Python (
+e.g., @wraps-based wrappers). Django middleware and WSGI middleware are
+real-world examples of decorator-like composition.
+
+[Example in Python](examples/decorator.py)
