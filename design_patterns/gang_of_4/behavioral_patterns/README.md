@@ -92,3 +92,31 @@ authentication/authorization chains, and layered processing where different
 components handle different aspects of a request.
 
 [Example in Python](./examples/chain_of_responsibility.py)
+
+---
+
+## TODO: Command Design Pattern
+
+---
+
+## TODO: Iterator Design Pattern
+
+---
+
+## TODO: Mediator Design Pattern
+
+---
+
+## TODO: State Design Pattern
+
+---
+
+## TODO: Template Method Design Pattern
+
+---
+
+## TODO: Visitor Design Pattern
+
+---
+
+## TODO: Memento Design Pattern
