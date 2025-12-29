@@ -4,6 +4,8 @@ Structural design patterns focus on how classes and objects are composed to form
 larger structures. They help ensure that if one part of a system changes, the
 entire structure doesn't need to change.
 
+---
+
 ## Adopter Design Pattern
 
 **What It Is**: A structural pattern that allows incompatible interfaces to work
@@ -32,3 +34,35 @@ Stripe/PayPal to your payment interface), and API client libraries that wrap
 third-party APIs with a cleaner interface.
 
 [Example in Python](examples/adopter.py)
+
+---
+
+## Proxy Design Pattern
+
+**What It Is**: A structural pattern that provides a surrogate or placeholder
+object that controls access to another object, acting as an intermediary between
+the client and the real object.
+
+**Purpose**: Solves the problem of controlling access to an object by adding an
+extra layer of indirection. The proxy can add functionality like lazy loading,
+access control, caching, logging, or remote access handling without changing the
+original object.
+
+**Benefits**:
+
+* Enables lazy initialization — create expensive objects only when actually
+  needed.
+* Controls access through permission checks or validation before delegating to
+  the real object.
+* Adds caching to improve performance by avoiding repeated expensive operations.
+* Provides logging, monitoring, or instrumentation without modifying the
+  original object.
+* Supplies a local representative for remote or expensive resources (making
+  remote resources appear local).
+* Protects the real object from direct manipulation by clients.
+
+**Common Use Cases You've Seen**: Django's lazy querysets (delaying database
+queries until needed), image lazy loading, authentication/authorization
+middleware, ORM lazy relationships, remote stubs/proxies for web services.
+
+[Example in Python](examples/proxy.py)
