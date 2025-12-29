@@ -97,3 +97,19 @@ e.g., @wraps-based wrappers). Django middleware and WSGI middleware are
 real-world examples of decorator-like composition.
 
 [Example in Python](examples/decorator.py)
+
+---
+
+## TODO: Facade Design Pattern
+
+---
+
+## TODO: Composite Design Pattern
+
+---
+
+## TODO: Flyweight Design Pattern
+
+---
+
+## TODO: Bridge Design Pattern
