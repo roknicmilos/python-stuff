@@ -75,3 +75,27 @@ being created accidentally.
 **Common Use Cases You've Seen**: Django's settings module, database connection
 pools, application-wide cache instances, and logging systems are typically
 implemented as singletons.
+
+---
+
+## Builder Design Pattern
+
+**What It Is**: A creational pattern that constructs complex objects
+step-by-step through a builder interface. It separates the construction of a
+complex object from its representation so the same construction process can
+create different representations.
+
+**Purpose**: Solves the problem of objects with many parameters (especially
+optional ones) or complex construction logic by allowing incremental, readable
+construction instead of passing everything through a complicated constructor.
+
+**Benefits**:
+
+* Creates highly readable, self-documenting code through method chaining or a
+  fluent API.
+* Handles many optional parameters without constructor pollution.
+* Allows building different variations of the same object type using different
+  builders.
+* Supports validation and constraints during the construction process.
+* Enables immutable object creation by assembling all parts before final
+  construction.
