@@ -4,6 +4,8 @@ Creational design patterns deal with object creation mechanisms, helping create
 objects in a manner suitable to the situation. The goal is to make the system
 independent of how its objects are created and represented.
 
+---
+
 ## Factory Design Patterns
 
 **What It Is**: A creational pattern that provides an interface or method for
@@ -38,3 +40,38 @@ There are **3 different factory patterns**:
 3. **Abstract Factory** → “Need a whole family of related objects? I’ll create
    them all for you.”
    [Example in Python](./examples/factory/abstract_factory.py)
+
+---
+
+## Singleton Design Pattern
+
+**What It Is**: A creational pattern that ensures a class has only one instance
+throughout the application's lifetime and provides a global access point to that
+instance.
+
+**Purpose**: Solves the problem of needing exactly one shared instance of a
+class across your entire application, such as database connections,
+configuration settings, or logging systems. Prevents multiple instances from
+being created accidentally.
+
+**Benefits**:
+
+* Guarantees only one instance exists, saving memory and resources.
+* Provides a single point of access to shared resources.
+* Lazy initialization - instance created only when first needed.
+* Thread-safe access to shared state (when implemented properly).
+* Useful for managing shared resources like database connection pools, caches,
+  or application configuration.
+
+**Cons**:
+
+* **Testing difficulties** - Singletons act as global state, making unit tests
+  harder to isolate and mock. Tests can interfere with each other through a
+  shared state.
+* **Tight coupling** - Code becomes directly dependent on the concrete singleton
+  implementation rather than an interface, reducing flexibility and making
+  changes harder.
+
+**Common Use Cases You've Seen**: Django's settings module, database connection
+pools, application-wide cache instances, and logging systems are typically
+implemented as singletons.
