@@ -31,3 +31,33 @@ listeners in JavaScript, pub/sub messaging systems, real-time notifications, and
 reactive frameworks where UI updates automatically when underlying data changes.
 
 [Example in Python](examples/observer.py)
+
+---
+
+## Strategy Design Pattern
+
+**What It Is**: A behavioral pattern that defines a family of interchangeable
+algorithms or behaviors, encapsulates each one, and makes them interchangeable
+at runtime. The client can choose which algorithm to use without knowing
+implementation details.
+
+**Purpose**: Solves the problem of having multiple ways to perform a task by
+allowing you to select the algorithm or behavior at runtime. Eliminates complex
+conditional statements by replacing them with separate strategy classes.
+
+**Benefits**:
+
+* Eliminates complex if/else or switch statements for different behaviors.
+* Makes algorithms interchangeable and easy to swap at runtime.
+* Promotes the Open/Closed Principle — add new strategies without modifying
+  existing code.
+* Encapsulates algorithm details, keeping client code clean and simple.
+* Makes testing easier by allowing strategies to be tested independently.
+* Supports dependency injection — strategies can be injected from outside.
+
+**Common Use Cases You've Seen**: Django's authentication backends (different
+login strategies), payment processing methods (credit card, PayPal, crypto),
+sorting algorithms, validation strategies, serialization formats (JSON, XML),
+and caching backends (Redis, Memcached, file-based).
+
+[Example in Python](examples/strategy.py)
