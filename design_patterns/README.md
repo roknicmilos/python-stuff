@@ -7,6 +7,27 @@ understand, maintain, and extend. They give developers a shared vocabulary
 (“factory,” “observer,” “adapter,” etc.) and help guide good design without
 dictating exact implementation.
 
+Keep in mind that design patterns are **not a magic bullet**. They should be
+applied judiciously, only when they genuinely improve code clarity,
+maintainability, or flexibility.
+
+**Consider these cons before using a design pattern**:
+
+* **Increased complexity** – introduces additional concepts, classes, or layers.
+* **More code / boilerplate** – patterns often require extra structure beyond a
+  direct solution.
+* **Harder readability** – intent may be less obvious to someone unfamiliar with
+  the pattern.
+* **Indirection** – behavior or control flow is less direct and harder to trace.
+* **Overengineering risk** – may solve problems you don’t actually have yet.
+* **Learning curve** – requires prior knowledge to understand and maintain
+  correctly.
+* **Maintenance overhead** – changes may require touching multiple related
+  components.
+* **Debugging difficulty** – issues can be spread across several abstractions.
+* **Misuse potential** – applying a pattern mechanically can worsen design
+  instead of improving it.
+
 ## Architectural Patterns
 
 Architectural patterns are high-level, structural blueprints that shape how an
