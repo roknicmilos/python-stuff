@@ -76,6 +76,8 @@ being created accidentally.
 pools, application-wide cache instances, and logging systems are typically
 implemented as singletons.
 
+[Example in Python](./examples/singleton.py)
+
 ---
 
 ## Builder Design Pattern
@@ -99,3 +101,32 @@ construction instead of passing everything through a complicated constructor.
 * Supports validation and constraints during the construction process.
 * Enables immutable object creation by assembling all parts before final
   construction.
+
+[Example in Python](./examples/builder.py)
+
+---
+
+## Prototype Design Pattern
+
+**What It Is**: A creational pattern that creates new objects by copying
+(cloning) an existing object, called the prototype, instead of instantiating
+them directly through constructors or factories.
+
+**Purpose**: Solves the problem of expensive or complex object creation (for
+example, heavy initialization, database lookups, or costly computation) by
+duplicating pre-configured prototypes. This allows efficient production of
+similar objects while preserving state and avoiding repeated setup logic.
+
+**Benefits**:
+
+* Improves performance for costly object initialization by reusing clones
+  instead of re-running expensive setup.
+* Hides concrete class details and creation complexity from the client.
+* Makes it easy to create variations of objects by modifying clones after
+  copying.
+* Preserves runtime-configured or pre-initialized state during duplication.
+* Reduces the need for subclassing or many factory implementations when
+  producing similar objects.
+
+In Python, the `copy` module (copy.copy / copy.deepcopy) is commonly used to
+implement prototypes.
