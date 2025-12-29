@@ -1,0 +1,40 @@
+# Creational Design Patterns
+
+Creational design patterns deal with object creation mechanisms, helping create
+objects in a manner suitable to the situation. The goal is to make the system
+independent of how its objects are created and represented.
+
+## Factory Design Patterns
+
+**What It Is**: A creational pattern that provides an interface or method for
+creating objects without specifying their exact classes. Instead of using
+constructors directly, you ask a factory to create objects for you.
+
+**Purpose**: Solves the problem of creating objects when you don't know the
+exact class needed until runtime, or when object creation logic is complex.
+Centralizes and encapsulates the creation logic so client code doesn't need to
+know implementation details.
+
+**Benefits**:
+
+* Decouples client code from concrete classes, depending only on interfaces
+* Centralizes object creation logic in one place, making it easier to maintain
+* Supports Open/Closed Principle - easy to add new types without changing
+  existing code
+* Makes code more testable by allowing easy injection of mock objects
+* Hides complex initialization logic from clients
+* Enables runtime decision-making about which class to instantiate
+
+**Common Use Cases You've Seen**: Django's Model.objects.create(), SQLAlchemy's
+create_engine(), Python's open() function, and Pydantic's parse_obj() are all
+factory patterns.
+
+There are **3 different factory patterns**:
+
+1. **Simple Factory** → “Call this function, and I’ll give you the right
+   object.” [Example in Python](./examples/factory/simple_factory.py)
+2. **Factory Method** → “Subclass decides what to create.”
+   [Example in Python](./examples/factory/factory_method.py)
+3. **Abstract Factory** → “Need a whole family of related objects? I’ll create
+   them all for you.”
+   [Example in Python](./examples/factory/abstract_factory.py)
