@@ -61,3 +61,34 @@ sorting algorithms, validation strategies, serialization formats (JSON, XML),
 and caching backends (Redis, Memcached, file-based).
 
 [Example in Python](examples/strategy.py)
+
+---
+
+## Chain of Responsibility Design Pattern
+
+**What It Is**: A behavioral pattern that passes a request along a chain of
+handler objects. Each handler can either process the request or forward it to
+the next handler in the chain until one of them handles it.
+
+**Purpose**: Solves the problem of decoupling the sender of a request from its
+receivers by allowing multiple objects a chance to handle the request. It
+removes direct coupling between caller and handler and makes the chain
+configurable at runtime.
+
+**Benefits**:
+
+* Decouples request senders from receivers, improving modularity.
+* Supports dynamic composition of handlers — add, remove, or reorder handlers at
+  runtime.
+* Promotes Single Responsibility — each handler focuses on one kind of
+  processing.
+* Makes it easy to extend processing steps without changing existing handlers.
+* Enables fallback processing: if one handler can't handle a request, another
+  may.
+
+**Common Use Cases You've Seen**: Web framework middleware (Django, FastAPI),
+request/response pipelines, validation chains, logging filters,
+authentication/authorization chains, and layered processing where different
+components handle different aspects of a request.
+
+[Example in Python](./examples/chain_of_responsibility.py)
